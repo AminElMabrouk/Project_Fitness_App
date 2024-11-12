@@ -1,4 +1,4 @@
-package com.fitnessapp.fitness;
+package com.fitnessapp.fitness.authentification;
 
 
 import android.content.Intent;
@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.fitnessapp.fitness.MainActivity;
+import com.fitnessapp.fitness.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
