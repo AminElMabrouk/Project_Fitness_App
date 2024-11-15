@@ -1,0 +1,159 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:id="@+id/main">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#2196F3"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:background="#1976D2"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Guide"
+            android:background="#1976D2"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stat"
+            android:background="#1976D2"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/all_programs_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Programs"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/see_all_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:background="#2196F3"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="8dp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:background="#FFA500"
+                        android:layout_marginEnd="16dp"
+                        />
+                    <!-- Orange -->
+
+                    <!-- Orange -->
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="#FFA500" />
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:background="#FFA500"
+                        android:layout_marginEnd="16dp"
+                        />
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:background="#FFA500"
+                        android:layout_marginEnd="16dp"
+                        />
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:background="#FFA500"
+                        android:layout_marginEnd="16dp"
+                        />
+                    <!-- Orange -->
+
+                    <!-- Add more cards as needed -->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Programs"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Program"
+                android:background="#2196F3"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- Horizontal Scrollable Card List -->
+
+
+            <!-- Add more content here as needed -->
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

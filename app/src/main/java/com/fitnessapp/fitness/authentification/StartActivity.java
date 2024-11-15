@@ -11,7 +11,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.fitnessapp.fitness.after_auth.ChooseGoal_HomePage;
 import com.fitnessapp.fitness.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -21,7 +24,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_start);
+        setContentView(R.layout.auth_start);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -46,5 +49,13 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
+    }
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user!=null){
+            startActivity(new Intent(StartActivity.this, ChooseGoal_HomePage.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+            finish();
+        }
     }
 }
