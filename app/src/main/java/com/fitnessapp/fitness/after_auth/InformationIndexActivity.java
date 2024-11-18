@@ -8,7 +8,7 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fitnessapp.fitness.HomePageActivity;
+import com.fitnessapp.fitness.tabs.AllTabsActivity;
 import com.fitnessapp.fitness.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -58,7 +58,7 @@ public class InformationIndexActivity extends AppCompatActivity {
     }
 
     private void goToHomePage() {
-        startActivity(new Intent(InformationIndexActivity.this, HomePageActivity.class));
+        startActivity(new Intent(InformationIndexActivity.this, AllTabsActivity.class));
         finish();
     }
 }

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fitnessapp.fitness.HomePageActivity;
+import com.fitnessapp.fitness.tabs.AllTabsActivity;
 import com.fitnessapp.fitness.R;
 import com.fitnessapp.fitness.authentification.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -64,7 +64,7 @@ public class ChooseGoal_HomePage extends AppCompatActivity {
 
     // Redirect to the HomePageActivity
     private void goToHomePage() {
-        startActivity(new Intent(ChooseGoal_HomePage.this, HomePageActivity.class));
+        startActivity(new Intent(ChooseGoal_HomePage.this, AllTabsActivity.class));
         finish();
     }
 }
