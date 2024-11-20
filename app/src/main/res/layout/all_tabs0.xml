@@ -18,7 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:title=""
-            app:contentInsetStartWithNavigation="0dp"> <!-- Corrected here -->
+            app:contentInsetStartWithNavigation="0dp">
 
             <ImageView
                 android:id="@+id/notificationBell"
@@ -48,9 +48,9 @@
             app:tabIndicatorColor="#000000"
             app:tabSelectedTextColor="#000000"
             app:tabTextColor="#000000" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- ViewPager2 for swiping between tabs -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"

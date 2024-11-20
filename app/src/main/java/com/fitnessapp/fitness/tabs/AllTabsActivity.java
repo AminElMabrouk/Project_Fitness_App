@@ -1,6 +1,5 @@
 package com.fitnessapp.fitness.tabs;
 
-
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -9,7 +8,7 @@ import com.fitnessapp.fitness.R;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class AllTabsActivity extends AppCompatActivity {
+public class AllTabsActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +25,17 @@ public class AllTabsActivity extends AppCompatActivity {
         // Attach TabLayout to ViewPager2
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
             switch (position) {
-                case 0: tab.setText("Home"); break;
-                case 1: tab.setText("Guide"); break;
-                case 2: tab.setText("Stats"); break;
+                case 0:
+                    tab.setText("Home");
+                    break;
+                case 1:
+                    tab.setText("Guide");
+                    break;
+                case 2:
+                    tab.setText("Stats");
+                    break;
             }
         }).attach();
+
     }
 }
