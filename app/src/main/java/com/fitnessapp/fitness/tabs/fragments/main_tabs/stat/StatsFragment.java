@@ -1,4 +1,4 @@
-package com.fitnessapp.fitness.tabs.fragments;
+package com.fitnessapp.fitness.tabs.fragments.main_tabs.stat;
 
 
 import android.os.Bundle;
