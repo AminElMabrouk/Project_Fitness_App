@@ -66,20 +66,176 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:fillViewport="true"
+                android:background="@color/light_gray"
+                android:padding="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
-                    <View
-                        android:layout_width="180dp"
-                        android:layout_height="150dp"
-                        android:background="#FFA500"
-                        android:layout_marginEnd="16dp" />
+                    <!-- Première image -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/gym"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_border" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Gym"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Deuxième image -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/muscle"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_border" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Muscle"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Troisième image -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/jambes"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_border" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Jambes"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Nouvelle image 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/workout"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_border" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Yoga"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Nouvelle image 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/pilate"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_border" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Pilates"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Nouvelle image 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/cardio"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/image_border" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Cardio"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </HorizontalScrollView>
+
+
 
             <!-- My Programs Section -->
             <TextView
