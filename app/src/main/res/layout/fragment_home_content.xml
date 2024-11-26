@@ -246,6 +246,62 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
 
+            <!-- LinearLayout pour les images en liste verticale -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <!-- Première image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/gym"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Deuxième image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/muscle"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Troisième image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/jambes"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Quatrième image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/workout"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Cinquième image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/pilate"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Sixième image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/cardio"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+            </LinearLayout>
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -253,6 +309,7 @@
                 android:background="#2196F3"
                 android:textColor="@android:color/white"
                 android:layout_marginBottom="16dp" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
