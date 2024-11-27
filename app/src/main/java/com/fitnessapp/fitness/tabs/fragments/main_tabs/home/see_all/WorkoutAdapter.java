@@ -2,6 +2,7 @@ package com.fitnessapp.fitness.tabs.fragments.main_tabs.home.see_all;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +17,19 @@ import com.fitnessapp.fitness.Classes.Workout;
 import com.fitnessapp.fitness.R;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.List;
 
 public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder> {
 
     private List<Workout> workoutList;
+    private FirebaseAnalytics analytics;
 
     // Constructor
-    public WorkoutAdapter(List<Workout> workoutList) {
+    public WorkoutAdapter(List<Workout> workoutList, FirebaseAnalytics analytics) {
         this.workoutList = workoutList;
+        this.analytics = analytics;
     }
 
     @NonNull
@@ -100,7 +104,6 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
             if (!workoutName.isEmpty() && !workoutDescription.isEmpty()) {
                 workout.setName(workoutName);
                 workout.setDescription(workoutDescription);
-
                 updateWorkoutInFirebase(workout);
             }
         });
@@ -123,6 +126,11 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
 
         db.collection("workouts").document(documentId).set(workout)
                 .addOnSuccessListener(aVoid -> {
+                    // Log event for workout update
+                    Bundle bundle = new Bundle();
+                    bundle.putString("workout_name", workout.getName());
+                    analytics.logEvent("workout_updated", bundle);
+
                     // Workout updated successfully
                     notifyDataSetChanged();  // Refresh the RecyclerView
                 })
@@ -143,6 +151,11 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
 
         db.collection("workouts").document(documentId).delete()
                 .addOnSuccessListener(aVoid -> {
+                    // Log event for workout deletion
+                    Bundle bundle = new Bundle();
+                    bundle.putString("workout_name", workout.getName());
+                    analytics.logEvent("workout_deleted", bundle);
+
                     // Remove the workout from the list and notify the adapter
                     workoutList.remove(position);
                     notifyItemRemoved(position);
