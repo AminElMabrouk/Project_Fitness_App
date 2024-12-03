@@ -93,6 +93,7 @@ public class see_all_workout extends Fragment {
                     adapter.notifyDataSetChanged();
 
                     // Log the event to Firebase Analytics
+
                     Bundle bundle = new Bundle();
                     bundle.putString("workout_name", workoutName);
                     analytics.logEvent("workout_added", bundle);
