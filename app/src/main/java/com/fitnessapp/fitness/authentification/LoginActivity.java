@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private Button login;
-    private ProgressBar progressBar;
+
 
     private FirebaseAuth auth;
 
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
-        progressBar = findViewById(R.id.progressBar); // Assume a ProgressBar is in the XML layout, initially set to GONE
+         // Assume a ProgressBar is in the XML layout, initially set to GONE
 
         auth = FirebaseAuth.getInstance();
 
@@ -75,11 +75,11 @@ public class LoginActivity extends AppCompatActivity {
      * @param password User's password
      */
     private void loginUser(String email, String password) {
-        progressBar.setVisibility(View.VISIBLE);  // Show progress indicator
+
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE); // Hide progress indicator
+
 
                 if (task.isSuccessful()) {
                     // Successful login

@@ -1,49 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentification.RegisterActivity">
+    android:background="@drawable/premier"
+    android:id="@+id/main"
+    android:padding="24dp">
 
+    <!-- Rounded background for form -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:padding="16dp">
+        android:background="@drawable/rounded_white_background"
+        android:padding="24dp"
+        android:layout_centerInParent="true">
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter username"
-            android:inputType="textPersonName" />
+            android:text="NEW ACCOUNT"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal"/>
 
+        <!-- Email Field -->
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Enter email"
-            android:inputType="textEmailAddress" />
+            android:hint="Email"
 
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:backgroundTint="@color/black"/>
+
+        <!-- Username Field -->
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Username"
+
+            android:inputType="text"
+            android:padding="12dp"
+            android:backgroundTint="@color/black"/>
+
+        <!-- Password Field -->
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Enter password"
-            android:inputType="textPassword" />
+            android:layout_marginTop="8dp"
+            android:hint="Password"
+            android:drawableStart="@drawable/ic_password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:backgroundTint="@color/black"/>
 
+        <!-- Sign Up Button -->
         <Button
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Register" />
-
+            android:layout_marginTop="16dp"
+            android:text="SIGN UP"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 </RelativeLayout>

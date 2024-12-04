@@ -15,6 +15,7 @@ public class ChoseGoalActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseFirestore db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
