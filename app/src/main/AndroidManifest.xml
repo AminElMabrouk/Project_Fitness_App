@@ -15,6 +15,11 @@
 
         <activity android:name=".tabs.fragments.main_tabs.guide.ExerciseDetailActivity"></activity>
 
+        <activity android:name=".tabs.ProfileActivity"
+            />
+
+
+
         <activity
             android:name=".after_auth.InformationIndexActivity"
             android:exported="false" />
