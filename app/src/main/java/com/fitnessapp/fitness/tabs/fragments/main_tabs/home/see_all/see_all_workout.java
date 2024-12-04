@@ -51,6 +51,11 @@ public class see_all_workout extends Fragment {
 
         // Set click listener to show a dialog
         addWorkoutButton.setOnClickListener(v -> showAddWorkoutDialog());
+        //back button
+        ImageView backButton = view.findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> {
+            requireParentFragment().getChildFragmentManager().popBackStack();
+        });
 
         return view;
     }

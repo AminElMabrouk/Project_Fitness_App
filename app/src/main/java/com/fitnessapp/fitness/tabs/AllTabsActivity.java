@@ -41,7 +41,14 @@ public class AllTabsActivity extends AppCompatActivity {
                     break;
             }
         }).attach();
+        // Profile picture click listener
+        findViewById(R.id.avatarIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(AllTabsActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
+
     }
+
 
     // Handles clicks for the fragment's buttons/cards
     public void openChest(View view) {
