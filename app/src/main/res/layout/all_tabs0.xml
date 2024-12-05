@@ -45,9 +45,10 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="#000000"
-            app:tabSelectedTextColor="#000000"
-            app:tabTextColor="#000000" />
+            app:tabIndicatorColor="?attr/colorPrimary"
+        app:tabSelectedTextColor="?attr/colorOnBackground" 
+        app:tabTextColor="?attr/colorOnSurface" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- ViewPager2 for swiping between tabs -->
