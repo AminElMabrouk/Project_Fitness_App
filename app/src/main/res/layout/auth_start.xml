@@ -1,58 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main"
-    android:orientation="vertical">
+    android:background="#F5F5F5"
+    android:id="@+id/main">
 
+    <!-- Background Image -->
 
-    <!-- Description -->
-
-    <!-- Sign Up Button -->
-
+    <!-- Content Container -->
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="465dp"
-        android:layout_height="455dp"
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:contentDescription="@string/image_desc"
+        android:scaleType="centerCrop"
         android:src="@drawable/premier" />
 
-    <!-- Login Button -->
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Your Ultimate\nPersonal Trainer"
-        android:textSize="24sp" />
+        android:layout_below="@id/backgroundImage"
+        android:layout_marginTop="78dp"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <TextView
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:text="Personalized workouts and plans for\nany fitness goal and skill level" />
+        <!-- Main Title -->
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#42D4B2"
-        android:text="login"
-        android:textColor="#FFFFFF" />
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Your Ultimate\nPersonal Trainer"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#42D4B2"
-        android:text="SIGN UP"
-        android:textColor="#FFFFFF" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Personalized workouts and plans for\nany fitness goal and skill level"
+            android:textColor="#666666"
+            android:textSize="16sp" />
 
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#42D4B2"
+            android:text="LOGIN"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
-</LinearLayout>
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#42D4B2"
+            android:text="SIGN UP"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
