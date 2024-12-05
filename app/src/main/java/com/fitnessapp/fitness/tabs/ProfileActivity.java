@@ -23,11 +23,12 @@ public class ProfileActivity extends AppCompatActivity {
             // Logout the user from Firebase
             FirebaseAuth.getInstance().signOut();
 
-            // Redirect to login activity
+
+            // Clear the activity stack and redirect to the LoginActivity
             Intent intent = new Intent(ProfileActivity.this, StartActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-            finish(); // End the current activity
+            finish(); // Close the current activity
         });
     }
 }
