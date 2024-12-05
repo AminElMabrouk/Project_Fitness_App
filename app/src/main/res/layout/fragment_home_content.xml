@@ -45,7 +45,7 @@
                     android:id="@+id/all_programs_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="All Programs 55"
+                    android:text="All Programs "
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:layout_alignParentStart="true"
@@ -69,10 +69,6 @@
 
                 android:layout_marginBottom="16dp">
 
-                android:layout_marginBottom="16dp"
-                android:fillViewport="true"
-                android:background="#000000"
-                android:padding="8dp">
 
 
                 <LinearLayout
@@ -81,8 +77,6 @@
 
                     android:orientation="horizontal">
 
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
 
                     <!-- Première image -->
                     <LinearLayout
