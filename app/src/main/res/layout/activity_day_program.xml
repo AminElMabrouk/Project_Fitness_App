@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
-    tools:context=".MainActivity">
+    tools:context=".tabs.AllTabsActivity">
 
     <!-- Conteneur Principal -->
     <LinearLayout
@@ -35,7 +34,6 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="8dp"
-            android:background="@drawable/bg_rounded_button"
             android:gravity="center"
             android:elevation="4dp">
 
@@ -51,7 +49,6 @@
                 android:id="@+id/btnAddDay"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_add"
                 android:layout_marginStart="8dp"
                 app:tint="@android:color/white" />
         </LinearLayout>

@@ -67,4 +67,5 @@ public class ChooseGoal_HomePage extends AppCompatActivity {
         startActivity(new Intent(ChooseGoal_HomePage.this, AllTabsActivity.class));
         finish();
     }
+
 }

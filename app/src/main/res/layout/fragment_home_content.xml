@@ -68,7 +68,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fillViewport="true"
-                android:background="@color/light_gray"
                 android:padding="8dp">
 
                 <LinearLayout
@@ -91,7 +90,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/gym"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/image_border" />
+                             />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -117,7 +116,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/muscle"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/image_border" />
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -143,7 +142,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/jambes"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/image_border" />
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -169,7 +168,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/workout"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/image_border" />
+                             />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -195,7 +194,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/pilate"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/image_border" />
+                             />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -220,7 +219,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/cardio"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/image_border" />
+                             />
 
                         <TextView
                             android:layout_width="wrap_content"
