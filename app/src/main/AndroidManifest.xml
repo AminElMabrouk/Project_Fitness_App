@@ -18,6 +18,10 @@
         <activity android:name=".tabs.ProfileActivity"
             />
 
+        <activity android:name=".tabs.fragments.main_tabs.home.check_workout.check_workout">
+            <!-- Intent filters and other configurations can be added here -->
+        </activity>
+
 
 
         <activity

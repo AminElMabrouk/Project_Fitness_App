@@ -93,7 +93,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/gym"
                             android:scaleType="centerCrop"
-
+                            android:onClick="openWorkout"
                              />
 
 
