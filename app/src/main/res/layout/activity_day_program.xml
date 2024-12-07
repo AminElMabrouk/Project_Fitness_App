@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".tabs.AllTabsActivity">
+=======
+
+   >
+    <!-- tools:context=".MainActivity"  -->
+>>>>>>> master
 
     <!-- Conteneur Principal -->
     <LinearLayout
@@ -34,6 +40,10 @@
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:padding="8dp"
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
             android:gravity="center"
             android:elevation="4dp">
 
@@ -49,6 +59,10 @@
                 android:id="@+id/btnAddDay"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
                 android:layout_marginStart="8dp"
                 app:tint="@android:color/white" />
         </LinearLayout>

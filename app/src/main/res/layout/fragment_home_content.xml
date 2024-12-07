@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
 
     <!-- Title Bar -->
 
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#2196F3"
+        android:background="#FF03DAC5"
         android:padding="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +46,7 @@
                     android:id="@+id/all_programs_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="All Programs 55"
+                    android:text="All Programs "
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:layout_alignParentStart="true"
@@ -56,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
-                    android:background="#2196F3"
+                    android:background="#FF03DAC5"
                     android:textColor="@android:color/white"
                     android:layout_alignParentEnd="true"
                     android:layout_marginBottom="8dp" />
@@ -66,15 +67,23 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:layout_marginBottom="16dp"
                 android:fillViewport="true"
                 android:padding="8dp">
+=======
+
+                android:layout_marginBottom="16dp">
+
+
+>>>>>>> master
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+
+                    android:orientation="horizontal">
+
 
                     <!-- Première image -->
                     <LinearLayout
@@ -90,7 +99,13 @@
                             android:layout_height="120dp"
                             android:src="@drawable/gym"
                             android:scaleType="centerCrop"
+<<<<<<< HEAD
                              />
+=======
+
+                             />
+
+>>>>>>> master
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -116,7 +131,13 @@
                             android:layout_height="120dp"
                             android:src="@drawable/muscle"
                             android:scaleType="centerCrop"
+<<<<<<< HEAD
                             />
+=======
+
+                             />
+
+>>>>>>> master
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -142,7 +163,13 @@
                             android:layout_height="120dp"
                             android:src="@drawable/jambes"
                             android:scaleType="centerCrop"
+<<<<<<< HEAD
                             />
+=======
+
+                            />
+
+>>>>>>> master
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -168,7 +195,13 @@
                             android:layout_height="120dp"
                             android:src="@drawable/workout"
                             android:scaleType="centerCrop"
+<<<<<<< HEAD
                              />
+=======
+
+                            />
+
+>>>>>>> master
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -194,7 +227,13 @@
                             android:layout_height="120dp"
                             android:src="@drawable/pilate"
                             android:scaleType="centerCrop"
+<<<<<<< HEAD
                              />
+=======
+
+                            />
+
+>>>>>>> master
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -219,7 +258,13 @@
                             android:layout_height="120dp"
                             android:src="@drawable/cardio"
                             android:scaleType="centerCrop"
+<<<<<<< HEAD
                              />
+=======
+
+                            />
+
+>>>>>>> master
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -230,6 +275,7 @@
                             android:textSize="14sp"
                             android:gravity="center" />
                     </LinearLayout>
+
 
                 </LinearLayout>
             </HorizontalScrollView>

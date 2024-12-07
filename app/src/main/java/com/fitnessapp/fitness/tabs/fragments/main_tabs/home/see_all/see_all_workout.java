@@ -13,9 +13,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.fitnessapp.fitness.Classes.Workout;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.fitnessapp.fitness.R;
 
 import java.util.ArrayList;
@@ -26,6 +28,8 @@ public class see_all_workout extends Fragment {
     private RecyclerView recyclerView;
     private WorkoutAdapter adapter;
     private List<Workout> workoutList = new ArrayList<>();
+    private FirebaseAnalytics analytics;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,8 +37,11 @@ public class see_all_workout extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view_workouts);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        analytics = FirebaseAnalytics.getInstance(requireContext());
+        // In your see_all_workout Fragment
+        FirebaseAnalytics analytics = FirebaseAnalytics.getInstance(requireContext());
+        adapter = new WorkoutAdapter(workoutList, analytics);
 
-        adapter = new WorkoutAdapter(workoutList);
         recyclerView.setAdapter(adapter);
 
         fetchWorkoutsFromFirebase();
@@ -44,6 +51,11 @@ public class see_all_workout extends Fragment {
 
         // Set click listener to show a dialog
         addWorkoutButton.setOnClickListener(v -> showAddWorkoutDialog());
+        //back button
+        ImageView backButton = view.findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> {
+            requireParentFragment().getChildFragmentManager().popBackStack();
+        });
 
         return view;
     }
@@ -84,12 +96,22 @@ public class see_all_workout extends Fragment {
                     workout.setDocumentId(documentReference.getId());
                     workoutList.add(workout);
                     adapter.notifyDataSetChanged();
+
+                    // Log the event to Firebase Analytics
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("workout_name", workoutName);
+                    analytics.logEvent("workout_added", bundle);
+
+                    // Optional: Show a confirmation log
+                    System.out.println(workoutName + " has been added.");
                 })
                 .addOnFailureListener(e -> {
                     // Error adding workout
                     e.printStackTrace();
                 });
     }
+
 
     private void fetchWorkoutsFromFirebase() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();

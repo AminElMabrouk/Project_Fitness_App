@@ -3,9 +3,16 @@
     <solid android:color="#F0F0F0" /> <!-- Light grey background -->
     <corners android:radius="8dp" /> <!-- Rounded corners -->
     <padding android:left="15dp" android:top="10dp" android:right="15dp" android:bottom="10dp" /> <!-- Padding inside EditText -->
+
     <solid android:color="@android:color/white" />
     <corners android:radius="8dp" />
     <stroke
         android:width="2dp"
+<<<<<<< HEAD
         />
+=======
+
+        android:color="#000000" />
+
+>>>>>>> master
 </shape>

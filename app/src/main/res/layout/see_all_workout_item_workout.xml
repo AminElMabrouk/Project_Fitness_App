@@ -4,14 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="8dp">
+    android:layout_margin="16dp"
+    android:padding="0dp"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="16dp"
+    android:background="?attr/selectableItemBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="200dp"
+        android:background="@drawable/arms"
+        android:clipToPadding="true"
+        android:clipChildren="true">
+
+        <!-- Gradient Overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_overlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <!-- Workout Name Text -->
         <TextView
@@ -20,10 +34,16 @@
             android:layout_height="wrap_content"
             android:text="Workout Name"
             android:textStyle="bold"
-            android:textSize="18sp"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/edit_button" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="8dp" />
 
         <!-- Workout Description Text -->
         <TextView
@@ -31,32 +51,50 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Workout Description"
-            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4"
             app:layout_constraintTop_toBottomOf="@id/workout_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/edit_button" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="8dp" />
 
-        <!-- Edit Button -->
-        <ImageView
-            android:id="@+id/edit_button"
-            android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/edit"
-        android:contentDescription="Edit Workout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        <!-- Buttons Container -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="8dp">
 
-        <!-- Delete Button -->
-        <ImageView
-            android:id="@+id/delete_button"
-            android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/delete"
-        android:contentDescription="Delete Workout"
-        app:layout_constraintEnd_toStartOf="@id/edit_button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+            <!-- Edit Button -->
+            <ImageView
+                android:id="@+id/edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/edit"
+                app:tint="@android:color/white"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit Workout"
+                android:elevation="8dp"
+                android:padding="8dp" />
 
+            <!-- Delete Button -->
+            <ImageView
+                android:id="@+id/delete_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/delete"
+                app:tint="@android:color/white"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete Workout"
+                android:elevation="8dp"
+                android:padding="8dp" />
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

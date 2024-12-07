@@ -1,49 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentification.RegisterActivity">
+    android:id="@+id/main"
+    android:padding="24dp">
 
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/premier"
+        android:scaleType="centerCrop"
+        />
+
+    <!-- Semi-transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- Form Container -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginHorizontal="32dp"
         android:layout_centerInParent="true"
-        android:padding="16dp">
+        android:background="@drawable/rounded_white_background"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter username"
-            android:inputType="textPersonName" />
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-medium"
+            android:text="NEW ACCOUNT"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
+        <!-- Email Field -->
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Enter email"
-            android:inputType="textEmailAddress" />
+            android:backgroundTint="@android:color/black"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp" />
 
+        <!-- Username Field -->
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="Username"
+            android:inputType="text"
+            android:padding="12dp" />
+
+        <!-- Password Field -->
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Enter password"
-            android:inputType="textPassword" />
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/black"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp" />
 
+        <!-- Sign Up Button -->
         <Button
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Register" />
-
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#42D4B2"
+            android:text="SIGN UP"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
     </LinearLayout>
-
 </RelativeLayout>
