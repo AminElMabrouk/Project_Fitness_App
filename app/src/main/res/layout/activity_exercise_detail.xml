@@ -28,7 +28,6 @@
             android:textSize="30dp"
             android:textStyle="bold"
             android:gravity="left" />
-
         <!-- Liste des exercices -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +35,6 @@
             android:orientation="vertical"
             android:layout_marginTop="16dp">
 
-            <!-- Exercice 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,16 +42,16 @@
                 android:layout_marginBottom="16dp">
 
                 <ImageView
-                    android:layout_width="120dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/exercice1"
                     android:layout_marginRight="16dp"
-                    android:contentDescription="Bench press on the floor" />
+                    android:contentDescription="Développé couché au sol" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bench press on the floor"
+                    android:text="Développé couché au sol"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     android:textColor="#000"
@@ -68,16 +66,16 @@
                 android:layout_marginBottom="16dp">
 
                 <ImageView
-                    android:layout_width="120dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/exercice2"
+                    android:src="@drawable/exercice1"
                     android:layout_marginRight="16dp"
-                    android:contentDescription="Spread with elastic" />
+                    android:contentDescription="Écartés avec élastique" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Spread with elastic"
+                    android:text="Écartés avec élastique"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     android:textColor="#000"
@@ -92,16 +90,16 @@
                 android:layout_marginBottom="16dp">
 
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/exercice4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/exercice3"
                     android:layout_marginRight="16dp"
-                    android:contentDescription="High pulley splits" />
+                    android:contentDescription="Écartés à la poulie haute" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="High pulley splits"
+                    android:text="Écartés à la poulie haute"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -116,21 +114,24 @@
                 android:layout_marginBottom="16dp">
 
                 <ImageView
-                    android:layout_width="120dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/exercice4"
                     android:layout_marginRight="16dp"
-                    android:contentDescription="Incline Dumbbell Press" />
+                    android:contentDescription="Développé incliné avec haltères" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Incline Dumbbell Press"
+                    android:text="Développé incliné avec haltères"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:gravity="center_vertical" />
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+        </LinearLayout>
+
+
 </ScrollView>
+

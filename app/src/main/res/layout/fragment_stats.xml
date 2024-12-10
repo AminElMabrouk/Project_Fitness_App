@@ -1,12 +1,237 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F7F9FC"
+    tools:context=".tabs.fragments.main_tabs.stat.StatsFragment">
+    <!-- Bouton Retour -->
     <TextView
+        android:id="@+id/titleStats"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="Your Stats"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/tvYourProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stats"
-        android:textSize="24sp" />
+        android:text=" Progress"
+        android:textSize="30dp"
+        android:textColor="#1A1A1A"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="16dp" />
+
+
+    <!-- Section des jours -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <!-- Jour 15 -->
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="143dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="15"
+                android:textColor="#1A1A1A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="M"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="9dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="8dp"
+                android:background="#A5D6A7" />
+        </LinearLayout>
+
+        <!-- Jour 16 -->
+        <LinearLayout
+            android:layout_width="36dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="16"
+                android:textColor="#1A1A1A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="8dp"
+                android:background="#A5D6A7" />
+        </LinearLayout>
+
+        <!-- Jour 17 -->
+        <LinearLayout
+            android:layout_width="28dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="17"
+                android:textColor="#1A1A1A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="W"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="#A5D6A7" />
+        </LinearLayout>
+
+        <!-- Jour 18 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="18"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:background="#A5D6A7" />
+        </LinearLayout>
+
+        <!-- Jour 19 -->
+        <LinearLayout
+            android:layout_width="36dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="19"
+                android:textColor="#9A9A9A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="#9A9A9A"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:background="#9A9A9A" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Titre "Weekly Progress" -->
+    <TextView
+        android:id="@+id/tvWeeklyProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly Progress"
+        android:textSize="30sp"
+        android:textColor="#1A1A1A"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Cercle de progression -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressCircle"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:indeterminate="false"
+            android:progress="65"
+            android:max="100"
+            android:progressDrawable="@drawable/img" />
+
+        <TextView
+            android:id="@+id/tvProgressPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="65%"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-medium" />
+    </RelativeLayout>
+
 </LinearLayout>

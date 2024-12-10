@@ -1,17 +1,16 @@
 package com.fitnessapp.fitness.tabs.fragments.main_tabs.guide;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fitnessapp.fitness.R;
 
 public class ExerciseDetailActivity extends AppCompatActivity {
-    public void goBack(View view) {
-        finish(); // Termine cette activité et retourne à la précédente
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,3 +28,11 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         findViewById(R.id.backButton).setOnClickListener(v -> finish());
     }
 }
+
+
+
+
+
+
+
+
