@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.fitnessapp.fitness.R;
 import com.fitnessapp.fitness.tabs.fragments.main_tabs.guide.ExerciseDetailActivity;
+import com.fitnessapp.fitness.tabs.fragments.main_tabs.home.check_workout.check_workout;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -49,6 +50,10 @@ public class AllTabsActivity extends AppCompatActivity {
 
     }
 
+    public void openWorkout(View view) {
+        navigateToWorkout();
+    }
+
 
     // Handles clicks for the fragment's buttons/cards
     public void openChest(View view) {
@@ -76,5 +81,12 @@ public class AllTabsActivity extends AppCompatActivity {
         intent.putExtra("EXERCISE_NAME", exerciseName);
         startActivity(intent);
         Log.d("ExerciseGuide", "Navigating to " + exerciseName + " page");
+    }
+
+    private void navigateToWorkout() {
+        Intent intent = new Intent(this, check_workout.class);
+
+        startActivity(intent);
+
     }
 }
